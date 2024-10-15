@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PROJETOFUNCOES
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string escolha;
+
+
+
+            Console.WriteLine("Digite 'MA' para média aritmética: ");
+            Console.WriteLine("Digite 'M7' para saber o multiplos de 7: ");
+            Console.WriteLine("Digite 'PI' para saber se o número é par ou impar: ");
+            escolha = Console.ReadLine();
+
+
+
+            switch (escolha)
+            {
+                case "MA":
+
+                    int i , valor, valor_total = 0,  media;
+
+                    for(i = 1; i <= 3; i++)
+                    {
+
+                        Console.WriteLine("Digite o "+i+" Número");
+                        valor = int.Parse(Console.ReadLine());
+
+                      valor_total += valor;
+
+                        
+
+                    }
+
+                    media = valor_total / 3;
+
+                    Console.WriteLine("Sua media é: "+media);
+
+
+
+                    break;
+
+                 case "M7":
+
+                    int num;
+
+                    Console.WriteLine("Digite um número para saber se é multiplo de 7: ");
+                    num = int.Parse(Console.ReadLine());
+
+                    if (num % 7 ==0) 
+                    {
+                        Console.WriteLine(+num+" É multiplo de 7! ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Não é multiplo!");
+                    }
+
+
+                    break;
+
+                case "PI":
+
+                    int par_ou_impar;
+
+                    Console.WriteLine("Digite um número para saber se é par ou ímpar: ");
+                    par_ou_impar = int.Parse(Console.ReadLine());
+
+                    if (par_ou_impar % 2 == 0)
+                    {
+                        Console.WriteLine("Este número é par ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Este número é impar ");
+                    }
+
+                    break;
+
+
+                default:
+                    Console.WriteLine("Valor invalido");
+                    break;
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
